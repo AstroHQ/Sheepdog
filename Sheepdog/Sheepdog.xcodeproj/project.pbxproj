@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F81AB5BC18AD2CC10043749A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AB5BB18AD2CC10043749A /* XCTest.framework */; };
+		F81AB5BD18AD2CC10043749A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AB5A218AD2CC10043749A /* Foundation.framework */; };
+		F81AB5BE18AD2CC10043749A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AB5A618AD2CC10043749A /* UIKit.framework */; };
+		F81AB5C618AD2CC10043749A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F81AB5C418AD2CC10043749A /* InfoPlist.strings */; };
+		F81AB5D818AD31060043749A /* SheepdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5D718AD31060043749A /* SheepdogTests.m */; };
+		F81AB5DC18AD65FE0043749A /* Sheepdog.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5DA18AD56D10043749A /* Sheepdog.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F81AB5A218AD2CC10043749A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F81AB5A418AD2CC10043749A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F81AB5A618AD2CC10043749A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F81AB5BA18AD2CC10043749A /* SheepdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheepdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81AB5BB18AD2CC10043749A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F81AB5C318AD2CC10043749A /* SheepdogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SheepdogTests-Info.plist"; sourceTree = "<group>"; };
+		F81AB5C518AD2CC10043749A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F81AB5D718AD31060043749A /* SheepdogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheepdogTests.m; sourceTree = SOURCE_ROOT; };
+		F81AB5D918AD56D10043749A /* Sheepdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheepdog.h; sourceTree = "<group>"; };
+		F81AB5DA18AD56D10043749A /* Sheepdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheepdog.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F81AB5B718AD2CC10043749A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81AB5BC18AD2CC10043749A /* XCTest.framework in Frameworks */,
+				F81AB5BE18AD2CC10043749A /* UIKit.framework in Frameworks */,
+				F81AB5BD18AD2CC10043749A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F81AB59618AD2CC10043749A = {
+			isa = PBXGroup;
+			children = (
+				F81AB5D918AD56D10043749A /* Sheepdog.h */,
+				F81AB5DA18AD56D10043749A /* Sheepdog.m */,
+				F81AB5A818AD2CC10043749A /* Sheepdog */,
+				F81AB5C118AD2CC10043749A /* SheepdogTests */,
+				F81AB5A118AD2CC10043749A /* Frameworks */,
+				F81AB5A018AD2CC10043749A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F81AB5A018AD2CC10043749A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81AB5BA18AD2CC10043749A /* SheepdogTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81AB5A118AD2CC10043749A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81AB5A218AD2CC10043749A /* Foundation.framework */,
+				F81AB5A418AD2CC10043749A /* CoreGraphics.framework */,
+				F81AB5A618AD2CC10043749A /* UIKit.framework */,
+				F81AB5BB18AD2CC10043749A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81AB5A818AD2CC10043749A /* Sheepdog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sheepdog;
+			sourceTree = "<group>";
+		};
+		F81AB5C118AD2CC10043749A /* SheepdogTests */ = {
+			isa = PBXGroup;
+			children = (
+				F81AB5D718AD31060043749A /* SheepdogTests.m */,
+				F81AB5C218AD2CC10043749A /* Supporting Files */,
+			);
+			path = SheepdogTests;
+			sourceTree = "<group>";
+		};
+		F81AB5C218AD2CC10043749A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F81AB5C318AD2CC10043749A /* SheepdogTests-Info.plist */,
+				F81AB5C418AD2CC10043749A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F81AB5B918AD2CC10043749A /* SheepdogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81AB5CE18AD2CC10043749A /* Build configuration list for PBXNativeTarget "SheepdogTests" */;
+			buildPhases = (
+				F81AB5B618AD2CC10043749A /* Sources */,
+				F81AB5B718AD2CC10043749A /* Frameworks */,
+				F81AB5B818AD2CC10043749A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SheepdogTests;
+			productName = SheepdogTests;
+			productReference = F81AB5BA18AD2CC10043749A /* SheepdogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F81AB59718AD2CC10043749A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AO;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Astro HQ";
+				TargetAttributes = {
+					F81AB5B918AD2CC10043749A = {
+						TestTargetID = F81AB59E18AD2CC10043749A;
+					};
+				};
+			};
+			buildConfigurationList = F81AB59A18AD2CC10043749A /* Build configuration list for PBXProject "Sheepdog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F81AB59618AD2CC10043749A;
+			productRefGroup = F81AB5A018AD2CC10043749A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F81AB5B918AD2CC10043749A /* SheepdogTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F81AB5B818AD2CC10043749A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81AB5C618AD2CC10043749A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F81AB5B618AD2CC10043749A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81AB5DC18AD65FE0043749A /* Sheepdog.m in Sources */,
+				F81AB5D818AD31060043749A /* SheepdogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F81AB5C418AD2CC10043749A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F81AB5C518AD2CC10043749A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F81AB5C918AD2CC10043749A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F81AB5CA18AD2CC10043749A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F81AB5CF18AD2CC10043749A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sheepdog.app/Sheepdog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F81AB5D018AD2CC10043749A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sheepdog.app/Sheepdog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F81AB59A18AD2CC10043749A /* Build configuration list for PBXProject "Sheepdog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81AB5C918AD2CC10043749A /* Debug */,
+				F81AB5CA18AD2CC10043749A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81AB5CE18AD2CC10043749A /* Build configuration list for PBXNativeTarget "SheepdogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81AB5CF18AD2CC10043749A /* Debug */,
+				F81AB5D018AD2CC10043749A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F81AB59718AD2CC10043749A /* Project object */;
+}
