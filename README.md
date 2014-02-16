@@ -8,29 +8,38 @@ Sheepdog is just two files and highly tested.
 
 More examples are available in the docs. This is just a taste:
 
+*Map*
 ```
 NSArray *array = @[@(1), @(-1)];
 [array map:^id(id obj) {
     return @([obj integerValue] + 1);
 }];
 --> [2, 0]
-
+```
+*Every*
+```
 NSArray *array = @[@(1), @(-1), @(2), @(4)];
 [array every:^BOOL(id obj) {
     return [obj integerValue] < 0;
 }];
 --> NO
-
+```
+*Partition*
+```
 NSArray *array = @[@(1), @(2), @(3), @(4)];
 [array partition:2];
 --> [[1, 2], [3,4]]
-
+```
+*Group By*
+```
 NSArray *array = @[@"bob", @"mat", @"sing", @"song"];
-[array partitionBy:^id(id obj) {
+[array groupBy:^id(id obj) {
    return @([obj length]);
 }];
 --> {3: ["bob", "mat"], 4: ["sing", "song"]}
 ```
+
+Other array utilities are available including: min, max, reverse, sort, distinct.
 
 ## Why?
 
