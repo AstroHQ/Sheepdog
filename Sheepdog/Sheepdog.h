@@ -10,7 +10,7 @@
 
 /**
 Sheepdog provides simple higher-order functions
-for common Cocoa data structures. BSD licensed and no 
+for common Cocoa data structures. MIT licensed and no
 dependencies required.
  
 These methods are inspired by Clojure. None of these 
