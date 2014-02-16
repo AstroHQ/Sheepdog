@@ -125,7 +125,7 @@ methods mutate the object being called on.
  *Example*
  
      NSArray *array = @[@"bob", @"mat", @"sing", @"song"];
-     [array partitionBy:^id(id obj) {
+     [array groupBy:^id(id obj) {
         return @([obj length]);
      }];
      --> {3: ["bob", "mat"], 4: ["sing", "song"]}
