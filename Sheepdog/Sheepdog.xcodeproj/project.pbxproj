@@ -11,8 +11,8 @@
 		F81AB5BD18AD2CC10043749A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AB5A218AD2CC10043749A /* Foundation.framework */; };
 		F81AB5BE18AD2CC10043749A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AB5A618AD2CC10043749A /* UIKit.framework */; };
 		F81AB5C618AD2CC10043749A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F81AB5C418AD2CC10043749A /* InfoPlist.strings */; };
-		F81AB5D818AD31060043749A /* SheepdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5D718AD31060043749A /* SheepdogTests.m */; };
-		F81AB5DC18AD65FE0043749A /* Sheepdog.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5DA18AD56D10043749A /* Sheepdog.m */; };
+		F81AB5F618B03CF90043749A /* SheepdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5F518B03CF90043749A /* SheepdogTests.m */; };
+		F81AB5F918B03CFD0043749A /* Sheepdog.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AB5F818B03CFD0043749A /* Sheepdog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		F81AB5BB18AD2CC10043749A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F81AB5C318AD2CC10043749A /* SheepdogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SheepdogTests-Info.plist"; sourceTree = "<group>"; };
 		F81AB5C518AD2CC10043749A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F81AB5D718AD31060043749A /* SheepdogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheepdogTests.m; sourceTree = SOURCE_ROOT; };
-		F81AB5D918AD56D10043749A /* Sheepdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheepdog.h; sourceTree = "<group>"; };
-		F81AB5DA18AD56D10043749A /* Sheepdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheepdog.m; sourceTree = "<group>"; };
+		F81AB5F518B03CF90043749A /* SheepdogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheepdogTests.m; sourceTree = "<group>"; };
+		F81AB5F718B03CFD0043749A /* Sheepdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheepdog.h; sourceTree = SOURCE_ROOT; };
+		F81AB5F818B03CFD0043749A /* Sheepdog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheepdog.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +45,6 @@
 		F81AB59618AD2CC10043749A = {
 			isa = PBXGroup;
 			children = (
-				F81AB5D918AD56D10043749A /* Sheepdog.h */,
-				F81AB5DA18AD56D10043749A /* Sheepdog.m */,
 				F81AB5A818AD2CC10043749A /* Sheepdog */,
 				F81AB5C118AD2CC10043749A /* SheepdogTests */,
 				F81AB5A118AD2CC10043749A /* Frameworks */,
@@ -76,6 +74,8 @@
 		F81AB5A818AD2CC10043749A /* Sheepdog */ = {
 			isa = PBXGroup;
 			children = (
+				F81AB5F718B03CFD0043749A /* Sheepdog.h */,
+				F81AB5F818B03CFD0043749A /* Sheepdog.m */,
 			);
 			path = Sheepdog;
 			sourceTree = "<group>";
@@ -83,7 +83,7 @@
 		F81AB5C118AD2CC10043749A /* SheepdogTests */ = {
 			isa = PBXGroup;
 			children = (
-				F81AB5D718AD31060043749A /* SheepdogTests.m */,
+				F81AB5F518B03CF90043749A /* SheepdogTests.m */,
 				F81AB5C218AD2CC10043749A /* Supporting Files */,
 			);
 			path = SheepdogTests;
@@ -166,8 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81AB5DC18AD65FE0043749A /* Sheepdog.m in Sources */,
-				F81AB5D818AD31060043749A /* SheepdogTests.m in Sources */,
+				F81AB5F918B03CFD0043749A /* Sheepdog.m in Sources */,
+				F81AB5F618B03CF90043749A /* SheepdogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +316,7 @@
 				F81AB5D018AD2CC10043749A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -81,6 +81,61 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
     return array;
 }
 
+- (NSArray *)distinct {
+    return [[NSSet setWithArray:self] allObjects];
+}
+
+- (NSArray *)partition:(NSInteger)n {
+    __block int i = 0;
+    __block NSNumber *val = @(YES);
+    return [self partitionBy:^id(id obj) {
+        if (i % n == 0) {
+            val = @(!val.boolValue);
+        }
+        i++;
+        return val;
+    }];
+}
+
+- (NSArray *)partitionBy:(id (^)(id obj))block {
+    NSMutableArray *outer = [NSMutableArray array];
+    NSMutableArray *inner = [NSMutableArray array];
+    
+    id lastValue = nil;
+    int i = 0;
+    for (id obj in self) {
+        id value = block(obj);
+        if (i == 0 || [value compare:lastValue] == NSOrderedSame) {
+            [inner addObject:obj];
+        } else {
+            [outer addObject:inner];
+            inner = [NSMutableArray array];
+            [inner addObject:obj];
+        }
+        lastValue = value;
+        i++;
+    }
+    if (inner.count > 0) {
+        [outer addObject:inner];
+    }
+    
+    return outer;
+}
+
+- (NSDictionary *)groupBy:(id (^)(id obj))block {
+    NSMutableDictionary *outer = [NSMutableDictionary dictionary];
+    return [self reduce:outer block:^NSMutableDictionary* (NSMutableDictionary *left, id right) {
+        id key = block(right);
+        NSMutableArray *inner = [outer objectForKey:key];
+        if (!inner) {
+            inner = [NSMutableArray array];
+            [outer setObject:inner forKey:key];
+        }
+        [inner addObject:right];
+        return outer;
+    }];
+}
+
 - (BOOL)any:(BOOL (^)(id obj))block {
     return __any(self, [NSMutableArray class], block);
 }
@@ -107,14 +162,6 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
     return result;
 }
 
-- (NSInteger)imax {
-    return [[self max] integerValue];
-}
-
-- (float)fmax {
-    return [[self max] floatValue];
-}
-
 - (id)min {
     if (self.count == 0) {
         return nil;
@@ -131,14 +178,6 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
                        }];
     
     return result;
-}
-
-- (NSInteger)imin {
-    return [[self min] integerValue];
-}
-
-- (float)fmin {
-    return [[self min] floatValue];
 }
 
 @end
@@ -190,14 +229,6 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
     return result;
 }
 
-- (NSInteger)imax {
-    return [[self max] integerValue];
-}
-
-- (float)fmax {
-    return [[self max] floatValue];
-}
-
 - (id)min {
     if (self.count == 0) {
         return nil;
@@ -218,14 +249,6 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
                        }];
     
     return result;
-}
-
-- (NSInteger)imin {
-    return [[self min] integerValue];
-}
-
-- (float)fmin {
-    return [[self min] floatValue];
 }
 
 @end

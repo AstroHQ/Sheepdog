@@ -104,6 +104,95 @@
     XCTAssertEqualObjects([array reverse], end, @"");
 }
 
+- (void)testDistinct {
+    NSArray *array;
+    NSArray *end;
+    
+    array = @[@(3), @(1), @(2), @(3), @(1)];
+    end = @[@(1), @(2), @(3)];
+    XCTAssertEqualObjects([[array distinct] sort], end, @"");
+}
+
+- (void)testPartitionBy {
+    NSArray *array;
+    NSArray *end;
+    NSArray *result;
+    
+    array = @[@(3), @(3), @(3), @(2), @(2), @(5), @(1), @(1)];
+    end = @[@[@(3), @(3), @(3)],
+            @[@(2), @(2)],
+            @[@(5)],
+            @[@(1), @(1)]];
+    result = [array partitionBy:^id(id obj){return obj;}];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[@(3), @(3)];
+    end = @[@[@(3), @(3)]];
+    result = [array partitionBy:^id(id obj){return obj;}];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[@(1)];
+    end = @[@[@(1)]];
+    result = [array partitionBy:^id(id obj){return obj;}];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[];
+    end = @[];
+    result = [array partitionBy:^id(id obj){return obj;}];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[@"bob", @"cat", @"mat", @"sing", @"song"];
+    end = @[@[@"bob", @"cat", @"mat"],
+            @[@"sing", @"song"]];
+    result = [array partitionBy:^id(id obj){return @([obj length]);}];
+    XCTAssertEqualObjects(result, end, @"");
+}
+
+- (void)testPartition {
+    NSArray *array;
+    NSArray *end;
+    NSArray *result;
+    
+    array = @[@(1), @(2), @(3), @(4), @(5)];
+    end = @[@[@(1), @(2)],
+            @[@(3), @(4)],
+            @[@(5)]];
+    result = [array partition:2];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[@(1), @(2), @(3), @(4), @(5)];
+    end = @[@[@(1), @(2), @(3)],
+            @[@(4), @(5)]];
+    result = [array partition:3];
+    XCTAssertEqualObjects(result, end, @"");
+            
+    array = @[@(1), @(2), @(3), @(4)];
+    end = @[@[@(1), @(2)],
+            @[@(3), @(4)]];
+    result = [array partition:2];
+    XCTAssertEqualObjects(result, end, @"");
+    
+    array = @[@(1)];
+    end = @[@[@(1)]];
+    result = [array partition:2];
+    XCTAssertEqualObjects(result, end, @"");
+}
+
+- (void)testGroupBy {
+    NSArray *array;
+    NSDictionary *end;
+    NSDictionary *result;
+    
+    array = @[@"bob", @"at", @"mat", @"sing", @"song"];
+    end = @{
+            @(3): @[@"bob", @"mat"],
+            @(2): @[@"at"],
+            @(4): @[@"sing", @"song"]
+    };
+    result = [array groupBy:^id(id obj){return @([obj length]);}];
+    XCTAssertEqualObjects(result, end, @"");
+}
+
 - (void)testAny {
     NSArray *array;
     

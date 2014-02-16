@@ -12,18 +12,20 @@
 - (NSArray *)filter:(BOOL (^)(id obj))block;
 - (id)reduce:(id)val block:(id (^)(id left, id right))block;
 - (NSArray *)map:(id (^)(id obj))block;
+
 - (NSArray *)sort;
 - (NSArray *)reverse;
+- (NSArray *)distinct;
+
+- (NSArray *)partition:(NSInteger)n;
+- (NSArray *)partitionBy:(id (^)(id obj))block;
+- (NSDictionary *)groupBy:(id (^)(id obj))block;
+
 - (BOOL)any:(BOOL (^)(id obj))block;
 - (BOOL)every:(BOOL (^)(id obj))block;
 
 - (id)max;
-- (NSInteger)imax;
-- (float)fmax;
-
 - (id)min;
-- (NSInteger)imin;
-- (float)fmin;
 @end
 
 @interface NSSet (Sheepdog)
@@ -35,10 +37,5 @@
 - (BOOL)every:(BOOL (^)(id obj))block;
 
 - (id)max;
-- (NSInteger)imax;
-- (float)fmax;
-
 - (id)min;
-- (NSInteger)imin;
-- (float)fmin;
 @end
