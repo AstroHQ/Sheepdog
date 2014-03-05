@@ -58,6 +58,20 @@
     XCTAssertEqualObjects(results, end, @"");
 }
 
+- (void)testFind {
+    NSArray *array = @[@(1), @(-1), @(-3), @(4)];
+    
+    NSNumber *num = [array find:^BOOL(id obj) {
+        return [obj integerValue] < 0;
+    }];
+    XCTAssertEqualObjects(num, @(-1), @"");
+    
+    NSNumber *num2 = [array find:^BOOL(id obj) {
+        return [obj integerValue] < -4;
+    }];
+    XCTAssertNil(num2, @"");
+}
+
 - (void)testReverse {
     NSArray *array;
     NSArray *end;

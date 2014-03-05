@@ -52,6 +52,15 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
     return [results count] == [collection count];
 }
 
+static id __find(id collection, BOOL (^block)(id obj)) {
+    for (id obj in collection) {
+        if (block(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
 #pragma mark - Array
 
 @implementation NSArray (Sheepdog)
@@ -66,6 +75,10 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
 
 - (NSArray *)map:(id (^)(id obj))block {
     return __map(self, [NSMutableArray class], block);
+}
+
+- (id)find:(BOOL (^)(id obj))block {
+    return __find(self, block);
 }
 
 - (NSArray *)sort {
@@ -200,6 +213,9 @@ static BOOL __every(id collection, Class type, BOOL (^block)(id obj)) {
     return __map(self, [NSMutableSet class], block);
 }
 
+- (id)find:(BOOL (^)(id obj))block {
+    return __find(self, block);
+}
 
 - (BOOL)any:(BOOL (^)(id obj))block {
     return __any(self, [NSMutableSet class], block);

@@ -74,6 +74,13 @@ methods mutate the object being called on.
 - (NSArray *)map:(id (^)(id obj))block;
 
 /**
+  Returns the first element for which the block returns YES.
+  @param block The predicate used to find a matching element
+  @return The first matching element, or nil if none found
+*/
+- (id)find:(BOOL (^)(id obj))block;
+
+/**
  Returns a sorted array using `compare:`
  */
 - (NSArray *)sort;
@@ -233,6 +240,13 @@ methods mutate the object being called on.
  @warning If `block` returns nil for an element it will be omitted from the results
  */
 - (NSSet *)map:(id (^)(id obj))block;
+
+/**
+ Returns the first element for which the block returns YES.
+ @param block The predicate used to find a matching element
+ @return The first matching element, or nil if none found
+ */
+- (id)find:(BOOL (^)(id obj))block;
 
 /**
  Returns YES if `block` returns YES for atleast one element in the set
